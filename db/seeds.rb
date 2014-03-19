@@ -40,7 +40,7 @@ Coffeeshop.create([
         yelp_review: 94,
         yelp_id: 'caffe-luxxe-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/caffe-luxxe-los-angeles',
-        url: 'http://www.caffeluxxe.com/',
+        url: 'http://www.caffeluxxe.com/'
     },
     {
         name: 'Caffe Luxxe', 
@@ -57,7 +57,7 @@ Coffeeshop.create([
         yelp_review: 261,
         yelp_id: 'caffe-luxxe-santa-monica',
         yelp_url: 'http://www.yelp.com/biz/caffe-luxxe-santa-monica',
-        url: 'http://www.caffeluxxe.com/',
+        url: 'http://www.caffeluxxe.com/'
     },
     {
         name: 'Caffe Luxxe', 
@@ -74,7 +74,7 @@ Coffeeshop.create([
         yelp_review: 41,
         yelp_id: 'caffe-luxxe-santa-monica-2',
         yelp_url: 'http://www.yelp.com/biz/caffe-luxxe-santa-monica-2',
-        url: 'http://www.caffeluxxe.com/',
+        url: 'http://www.caffeluxxe.com/'
     },
     {
         name: 'Coffee Commissary', 
@@ -167,7 +167,7 @@ Coffeeshop.create([
         display_city: 'Palm Springs', 
         display_state: 'CA', 
         display_zip: '92262', 
-        neighborhood: nil,
+        neighborhood: 'Palm Springs',
         phone: '(760) 327-9050', 
         fair_trade: nil,
         organic: nil,
@@ -295,23 +295,6 @@ Coffeeshop.create([
         yelp_review: 58,
         yelp_id: 'groundwork-coffee-company-santa-monica-2',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-company-santa-monica-2',
-        url: 'http://www.groundworkcoffee.com/'
-    },
-    {
-        name: 'Groundworks', 
-        display_address: '2640 Main St', 
-        display_city: 'Santa Monica', 
-        display_state: 'CA',
-        display_zip: '90405', 
-        neighborhood: 'Santa Monica',
-        phone: '(310) 458-8712',
-        fair_trade: true, 
-        organic: true, 
-        direct_trade: nil, 
-        yelp_rating: 4.0, 
-        yelp_review: 209,
-        yelp_id: 'santa-monica-farmers-market-sunday-santa-monica-2',
-        yelp_url: 'http://www.yelp.com/biz/santa-monica-farmers-market-sunday-santa-monica-2',
         url: 'http://www.groundworkcoffee.com/'
     },
     {
@@ -592,7 +575,8 @@ Coffeeshop.create([
         display_address: '8565 Melrose Ave', 
         display_city: 'West Hollywood', 
         display_state: 'CA',
-        display_zip: '90069', 
+        display_zip: '90069',
+        neighborhood: 'West Hollywood', 
         phone: '(310) 659-0628',
         fair_trade: nil, 
         organic: true, 

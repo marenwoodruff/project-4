@@ -59,8 +59,22 @@
 
 <div>
   <h1>Our map goes here</h1>
+  <%= form_tag coffeeshops_path, :method => :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search Near", :name => nil %>
+    </p>
+  <% end %>
+  <!-- <h1>Lat and Long</h1>
+  <%#= form_tag coffeeshops_path, :method => :get do %>
+    <p>
+      <%#= text_field_tag :search_lat %>
+      <%#= text_field_tag :search_lng %>
+      <%#= submit_tag "Search Near", :name => nil %>
+    </p>
+  <%# end %> -->
     <!-- The "canvas," where our map is rendered -->
-    <div id="map-canvas"></div>
+  <div id="map-canvas"></div>
 </div>
 <!-- Our gmaps4rails handler scripts -->
 <script type="text/javascript">

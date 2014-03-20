@@ -81,8 +81,16 @@
 <%= link_to 'Edit', edit_coffeeshop_path(@coffeeshop) %> |
 <%= link_to 'Back', coffeeshops_path %>
 
+<ul>
+  <% for coffeeshop in @coffeeshop.nearbys(5) %>
+    <li><%= link_to coffeeshop.full_address, coffeeshop %> (<%= coffeeshop.distance.round(2) %> miles)</li>
+  <% end %>
+</ul>
+
 <div>
     <h1>Our map goes here</h1>
+    <h3>Nearby locations</h3>
+
     <!-- The "canvas," where our map is rendered -->
     <div id="map-canvas"></div>
 </div>

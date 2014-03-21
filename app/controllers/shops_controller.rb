@@ -10,10 +10,10 @@ require "rubygems"
     term = URI::encode(params[:term])
     location = URI::encode(params[:location]) #/// create search form to use the term & location
     #Yelp Api identitfication keys
-    consumer_key = '8E8B_BGTRQ9kUAyw1KyDDg'
-    consumer_secret = 'PEUQaNwaNV08ZwCaCeSLuBHIJQM'
-    token = 'GFhb42Ym4SEEUL_ykaJvoTnM51SAOdZT'
-    token_secret = 'fFAnJkm__Em0hRw0yJxExiXJXRU'
+    consumer_key = 'HeQOkzJr-cCt3RNFX5Wmhw'
+    consumer_secret = 'bWPmDsugZu3TUz6eVcNHwxacjGM'
+    token = 'fYYyJUwaZ76S16Yeuj2PLB-0QcxOkf5A'
+    token_secret = 'RD8qCoT0beDQFWmLyAHJ8B67WHw'
     # Yelp api url
     api_host = 'api.yelp.com'
     #Authenication of api request call

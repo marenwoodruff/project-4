@@ -1,9 +1,0 @@
-
-<!--  formtag = creating a new form and what i would like to be passed in it.--> 
-<%= form_tag(yelp_shops_path, method: "get") do %>
-	<%= label_tag(:term, "shops search term")%>
-	<%= text_field_tag(:term)%>
-	<%= label_tag(:location, "Pick your location")%>
-	<%= text_field_tag(:location)%>
-	<%= submit_tag "Locate"%>
-<% end%>

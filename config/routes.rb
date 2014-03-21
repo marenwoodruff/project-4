@@ -3,7 +3,7 @@ Coffeeapp::Application.routes.draw do
   resources :auths, only:[:new, :create]
   resources :users, only:[:index, :new, :create]
   resources :coffeeshops
-  resources :yelp_shops
+  resources :shops
   
   delete "auths" => "auths#destroy"
   root 'coffeeshops#index'

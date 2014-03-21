@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140320193327) do
+ActiveRecord::Schema.define(version: 20140321025004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20140320193327) do
   add_index "favorites", ["coffeeshop_id"], name: "index_favorites_on_coffeeshop_id", using: :btree
   add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
 
+  create_table "shops", force: true do |t|
+    t.string   "name"
+    t.string   "display_address"
+    t.string   "yelp_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "location"
@@ -56,14 +64,6 @@ ActiveRecord::Schema.define(version: 20140320193327) do
     t.string   "hashed_password"
     t.string   "username"
     t.string   "salt"
-  end
-
-  create_table "yelp_shops", force: true do |t|
-    t.string   "name"
-    t.string   "display_address"
-    t.string   "yelp_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end

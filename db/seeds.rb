@@ -36,11 +36,11 @@ Coffeeshop.create([
         fair_trade: true, 
         direct_trade: false,
         organic: false,
-        url: "www.antiguacoffeehouse.com", 
+        url: "http://www.antiguacoffeehouse.com", 
         yelp_id: "antigua-coffee-Los-Angeles",
         yelp_rating:4, 
         yelp_review:129, 
-        yelp_url: "www.yelp.com/biz/antigua-coffee-los-angeles"
+        yelp_url: "http://www.yelp.com/biz/antigua-coffee-los-angeles"
     },
     {
         name: 'Balconi Coffee Company', 
@@ -87,11 +87,11 @@ Coffeeshop.create([
         fair_trade: true, 
         direct_trade: false,
         organic: false,
-        url:"blackdogcoffee.com", 
+        url:"http://blackdogcoffee.com", 
         yelp_id:"black-dog-coffee-los-angeles", 
         yelp_rating: 3.5, 
         yelp_review:155,
-        yelp_url:"www.yelp.com/biz/black-dog-coffee-los-angeles"
+        yelp_url:"http://www.yelp.com/biz/black-dog-coffee-los-angeles"
     },
     {
         name: "Bourbon Street Cafe", 
@@ -121,7 +121,7 @@ Coffeeshop.create([
         fair_trade: false, 
         direct_trade: false,
         organic: true,
-        url: "www.bourgeoispig.menutoeat.com", 
+        url: "http://www.bourgeoispig.menutoeat.com", 
         yelp_id: "bourgeois-pig-los-angeles", 
         yelp_rating:4, 
         yelp_review:437, 
@@ -138,7 +138,7 @@ Coffeeshop.create([
         fair_trade: false, 
         direct_trade: true,
         organic: true,
-        url: "www.brucoffeebar.com", 
+        url: "http://www.brucoffeebar.com", 
         yelp_id: "bru-coffeebar-los-angeles-2", 
         yelp_rating:3.5, 
         yelp_review:174, 
@@ -172,7 +172,7 @@ Coffeeshop.create([
         fair_trade: false, 
         direct_trade: false,
         organic: true,
-        url: "www.cacaocoffeehouse.com", 
+        url: "http://www.cacaocoffeehouse.com", 
         yelp_id: "cacao-coffee-house-los-angeles", 
         yelp_rating:3.5, 
         yelp_review:135, 
@@ -189,11 +189,11 @@ Coffeeshop.create([
         fair_trade: false,
         direct_trade: false,
         organic: true,
-        url:"www.cafedulce.com", 
+        url:"http://www.cafedulce.com", 
         yelp_id:"cafe-dulce-los-angeles", 
         yelp_rating:4, 
         yelp_review: 870,
-        yelp_url: "www.yelp.com/biz/cafe-dulce-los-angeles"
+        yelp_url: "http://www.yelp.com/biz/cafe-dulce-los-angeles"
     },
     {
         name: "Cafe De Leche", 
@@ -206,7 +206,7 @@ Coffeeshop.create([
         fair_trade: false, 
         direct_trade: true,
         organic: true,
-        url: "www.cafedeleche.net", 
+        url: "http://www.cafedeleche.net", 
         yelp_id: "caf%C3%A9-de-leche-los-angeles-2", 
         yelp_rating:4, 
         yelp_review:289, 
@@ -243,7 +243,7 @@ Coffeeshop.create([
         yelp_rating: 4.0, 
         yelp_review: 261,
         yelp_id: 'caffe-luxxe-santa-monica',
-        yelp_url: 'http://www.yelp.com/biz/caffe-luxxe-santa-monica',
+        yelp_url: 'http://http://www.yelp.com/biz/caffe-luxxe-santa-monica',
         url: 'http://www.caffeluxxe.com/'
     },
     {

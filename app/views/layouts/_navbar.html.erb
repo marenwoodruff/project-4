@@ -1,0 +1,55 @@
+<div class="off-canvas-wrap">
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title">Coffee App</h1>
+      </section>
+
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu" style="height:200px;">
+      <ul class="off-canvas-list">
+        <li><label>Information</label></li>
+        <li><a href="#">About This App</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </aside>
+
+    <aside class="right-off-canvas-menu" style="height:300px;">
+      <ul class="off-canvas-list">
+        <li><label>Coffee Shops</label></li><br />
+        <li>
+          <% @coffeeshops.each do |coffeeshop| %>
+            <li>
+              <%= link_to "#{coffeeshop.name}", coffeeshop_path(coffeeshop) %>
+            </li>
+          <% end %>
+        </li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+      <!-- content goes here -->
+    </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+<script>
+      $('#nav-open-btn').on('click', function() {
+    $('#inner-wrap').animate({ left: '70%' }, 500);
+});
+
+$('#nav-close-btn').on('click', function() {
+    $('#inner-wrap').animate({ left: '0' }, 500);
+});
+</script>

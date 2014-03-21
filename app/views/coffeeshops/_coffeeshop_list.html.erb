@@ -1,0 +1,51 @@
+<h1>Listing coffeeshops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Display address</th>
+      <th>Display city</th>
+      <th>Display state</th>
+      <th>Display zip</th>
+      <th>Neighborhood</th>
+      <th>Phone</th>
+      <th>Fair trade</th>
+      <th>Organic</th>
+      <th>Direct trade</th>
+      <th>Yelp rating</th>
+      <th>Yelp review</th>
+      <th>Yelp</th>
+      <th>Yelp url</th>
+      <th>Url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coffeeshops.each do |coffeeshop| %>
+      <tr>
+        <td><%= link_to "#{coffeeshop.name}", coffeeshop_path(coffeeshop)%></td>
+        <td><%= coffeeshop.display_address %></td>
+        <td><%= coffeeshop.display_city %></td>
+        <td><%= coffeeshop.display_state %></td>
+        <td><%= coffeeshop.display_zip %></td>
+        <td><%= coffeeshop.neighborhood %></td>
+        <td><%= coffeeshop.phone %></td>
+        <td><%= coffeeshop.fair_trade %></td>
+        <td><%= coffeeshop.organic %></td>
+        <td><%= coffeeshop.direct_trade %></td>
+        <td><%= coffeeshop.yelp_rating %></td>
+        <td><%= coffeeshop.yelp_review %></td>
+        <td><%= coffeeshop.yelp_id %></td>
+        <td><%= coffeeshop.yelp_url %></td>
+        <td><%= coffeeshop.url %></td>
+        <td><%= link_to 'Show', coffeeshop %></td>
+        <td><%= link_to 'Edit', edit_coffeeshop_path(coffeeshop) %></td>
+        <td><%= link_to 'Destroy', coffeeshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

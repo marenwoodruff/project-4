@@ -16,16 +16,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(params.require(:user).permit(:username, :password))
 
-    respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @user }
+        session[:user_id] = @user.id
+        redirect_to root_path
       else
-        format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+        render 'new'
     end
   end
 
@@ -50,7 +47,13 @@ class UsersController < ApplicationController
   end
 
   private
-    
+    def verify_not_logged_in
+      if current_user
+        flash[:error] = " You need to log out!"
+        redirect_to root_path
+      end
+    end
+
     def set_user
       @user = User.find(params[:id])
     end

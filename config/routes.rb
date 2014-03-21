@@ -1,7 +1,12 @@
 Coffeeapp::Application.routes.draw do
-  resources :users
-
+  
+  resources :auths, only:[:new, :create]
+  resources :users, only:[:index, :new, :create]
   resources :coffeeshops
+  resources :yelp_shops
+  
+  delete "auths" => "auths#destroy"
+  root 'coffeeshops#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

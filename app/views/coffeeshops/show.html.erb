@@ -10,28 +10,25 @@
 </p>
 
 <p id="coffeeshop">
-  <strong>Address:</strong>
+  <strong></strong>
   <%= @coffeeshop.display_address %>
 </p>
 
 <p id="coffeeshop">
-  <strong>City:</strong>
-  <%= @coffeeshop.display_city %>
-</p>
-
-<p id="coffeeshop">
-  <strong>State:</strong>
-  <%= @coffeeshop.display_state %>
-</p>
-
-<p id="coffeeshop">
-  <strong>Zip:</strong>
+  <strong></strong>
+  <%= @coffeeshop.display_city %>,
+  <%= @coffeeshop.display_state %>,
   <%= @coffeeshop.display_zip %>
 </p>
 
 <p id="coffeeshop">
   <strong>Neighborhood:</strong>
   <%= @coffeeshop.neighborhood %>
+</p>
+
+<p id="coffeeshop">
+  <strong>Url:</strong>
+  <%= link_to @coffeeshop.url, @coffeeshop.url%>
 </p>
 
 <p id="coffeeshop">
@@ -42,19 +39,19 @@
 
 <% if @coffeeshop.fair_trade%>
   <p id="coffeeshop">
-    <strong>Fair trade: true </strong>
+    <strong>Fair trade coffee </strong>
   </p>
 <% end %>
 
 <% if @coffeeshop.organic %>
   <p id="coffeeshop">
-    <strong>Organic: true </strong>
+    <strong>Organic coffee </strong>
   </p>
 <% end %>
 
 <% if @coffeeshop.direct_trade %> 
   <p id="coffeeshop">
-    <strong>Direct trade: true</strong> 
+    <strong>Direct trade coffee</strong> 
   </p>
 <% end %>
 
@@ -64,24 +61,21 @@
 </p>
 
 <p id="coffeeshop">
-  <strong>Yelp review:</strong>
+  <strong>Number of reviews:</strong>
   <%= @coffeeshop.yelp_review %>
 </p>
 
-<p id="coffeeshop">
+<!-- <p id="coffeeshop">
   <strong>Yelp:</strong>
-  <%= @coffeeshop.yelp_id %>
-</p>
+  <%#= @coffeeshop.yelp_id %>
+</p> -->
 
 <p id="coffeeshop">
   <strong>Yelp url:</strong>
   <%= link_to @coffeeshop.yelp_url, @coffeeshop.yelp_url %>
 </p>
 
-<p id="coffeeshop">
-  <strong>Url:</strong>
-  <%= link_to @coffeeshop.url, @coffeeshop.url%>
-</p>
+
 
 <%= link_to 'Home Page', coffeeshops_path %> | 
 <%= link_to 'Edit', edit_coffeeshop_path(@coffeeshop) %> |

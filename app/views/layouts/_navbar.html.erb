@@ -6,7 +6,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Coffee App</h1>
+        <h1 class="title">Coffee's Up</h1>
       </section>
 
       <section class="right-small">
@@ -15,8 +15,9 @@
     </nav>
 
     <aside class="left-off-canvas-menu" style="height:200px;">
-      <ul class="off-canvas-list">
+      <ul  class="off-canvas-list">
         <li><label>Information</label></li>
+        <li><%= link_to 'Home', coffeeshops_path %></a></li>
         <li><a href="#">About This App</a></li>
         <li><a href="#">Sign Up</a></li>
       </ul>
@@ -45,11 +46,11 @@
 </div>
 
 <script>
-      $('#nav-open-btn').on('click', function() {
+  $('#nav-open-btn').on('click', function() {
     $('#inner-wrap').animate({ left: '70%' }, 500);
-});
+  });
 
-$('#nav-close-btn').on('click', function() {
+  $('#nav-close-btn').on('click', function() {
     $('#inner-wrap').animate({ left: '0' }, 500);
-});
+  });
 </script>

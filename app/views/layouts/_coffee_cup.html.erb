@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   @import url(http://fonts.googleapis.com/css?family=Lato:700,900);
+
+    body { background-color: #3399ff }
+
+    h2 {
+      margin: 0 auto;
+      width: 400px;
+      font-size: 36px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      color: whiteSmoke;
+    }
+
+    #container {
+      height: 370px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      /*top: -20px;*/
+      width: 350px;
+    }
+
+    #container div { position: absolute; }
+
+    .pour {
+      position: absolute;
+      left: 45%;
+      width: 10px;
+      height: 0px;
+      background-color: #331900;
+      border-radius: 10px
+    }
+
+    #cup {
+      border: 10px solid #FFF;
+      border-top: 0;
+      border-radius: 0 0 20px 20px;
+      height: 182px;
+      left: 60px;
+      right: -100;
+      bottom: 0;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    #cup:before,
+    #cup:after {
+      border: 10px solid #FFF;
+      border-bottom: 0;
+      border-radius: 0px 180px 180px 0;
+      content: '';
+      height: 120px;
+      margin-left: -120px;
+      margin-right: -30px;
+      position: absolute;
+      width: 60px;
+    }
+
+    #cup:before { left: -50px; }
+    #cup:after { right: -50px; }
+
+    #liquid {
+      background-color: #331900;
+      border: 10px;
+      border-radius: 0 0 10px 10px;
+      bottom: 0;
+      height: 0px;
+      overflow: hidden;
+      width: 200px;
+    }
+
+    #liquid:after {
+      background-color: rgba(255, 255, 255, 0.25);
+      bottom: -15px;
+      content: '';
+      height: 210px;
+      left: -40px;
+      position: absolute;
+      transform: rotate(30deg);
+      -webkit-transform: rotate(15deg);
+      width: 110px;
+    }
+
+
+    /* Coffee Text */
+
+    .animated {
+      -webkit-animation-fill-mode:both;
+         -moz-animation-fill-mode:both;
+              animation-fill-mode:both;
+      
+      -webkit-animation-duration:5s;
+         -moz-animation-duration:5s;
+              animation-duration:5s;
+      
+      -webkit-animation-delay:3.5s; 
+         -moz-animation-delay:3.5s;
+              animation-delay:3.5s;
+    }
+
+
+    .animated.drink {
+      -webkit-animation-duration:2s;
+         -moz-animation-duration:2s;
+              animation-duration:2s;
+    }
+
+    @-webkit-keyframes drink {
+      0% { 
+        -webkit-transform: rotate(0); 
+        -webkit-transform-origin: top left; 
+        -webkit-animation-timing-function: ease-in-out; 
+      }
+      
+      20%, 60% { 
+        -webkit-transform: rotate(80deg); 
+        -webkit-transform-origin: top left; 
+        -webkit-animation-timing-function: ease-in-out; 
+      } 
+      40% { 
+        -webkit-transform: rotate(60deg); 
+        -webkit-transform-origin: top left; 
+        -webkit-animation-timing-function: ease-in-out; 
+      } 
+      
+      80% { 
+        -webkit-transform: rotate(60deg) translateY(0);  
+        -webkit-transform-origin: top left; 
+        -webkit-animation-timing-function: ease-in-out;
+        opacity: 1;
+      } 
+      
+      100% {
+        -webkit-transform: translateY(700px); 
+        opacity: 0; 
+      }
+    }
+
+    @-moz-keyframes drink {
+      0% { 
+        -moz-transform: rotate(0); 
+        -moz-transform-origin: top left; 
+        -moz-animation-timing-function: ease-in-out; 
+      }
+      
+      20%, 60% { 
+        -moz-transform: rotate(80deg); 
+        -moz-transform-origin: top left; 
+        -moz-animation-timing-function: ease-in-out; 
+      } 
+      
+      40% { 
+        -moz-transform: rotate(60deg); 
+        -moz-transform-origin: top left; 
+        -moz-animation-timing-function: ease-in-out; 
+      }
+      
+      80% {
+        -moz-transform: rotate(60deg) translateY(0); opacity: 1; 
+        -moz-transform-origin: top left; 
+        -moz-animation-timing-function: ease-in-out; 
+      }
+      
+      100% { 
+        -moz-transform: translateY(700px); 
+        opacity: 0; 
+      }
+    }
+
+    @keyframes drink {
+      0% { 
+        transform: rotate(0); 
+        transform-origin: top left; 
+        animation-timing-function: ease-in-out; 
+      }
+      
+      20%, 60% { 
+        transform: rotate(80deg); 
+        transform-origin: top left; 
+        animation-timing-function: ease-in-out; 
+      }
+      
+      40% { 
+        transform: rotate(60deg); 
+        transform-origin: top left; 
+        animation-timing-function: ease-in-out; 
+      }
+      
+      80% { 
+        transform: rotate(60deg) translateY(0); 
+        opacity: 1; transform-origin: top left; 
+        animation-timing-function: ease-in-out; 
+      } 
+      100% { 
+        transform: translateY(700px); 
+        opacity: 0; 
+      }
+    }
+
+    .drink {
+      -webkit-animation-name: drink;
+      -moz-animation-name: drink;
+      animation-name: drink;
+    }
+
+  </style>
+</head>
+
+<body onload="load">
+  <div id="container">
+    <div class="pour"></div>
+    <div id="cup">
+      <div class="coffee"></div>
+      
+      <div id="liquid"></div>
+    </div>
+  </div>
+    
+  <h2 class="animated drink">Fill 'er up!</h2>
+
+<script>
+  $(document).ready(function() {
+  function load(){
+  $('.pour') //Pour Me Another Drink, Bartender!
+    .delay(1800)
+    .animate({
+      height: '360px'
+      }, 1500)
+    .delay(1600)
+    .slideUp(500);
+  
+  $('#liquid') // I Said Fill 'Er Up!
+    .delay(3200)
+    .animate({
+      height: '170px'
+    }, 2500);
+  
+  $('.coffee') // Keep that Coffee Rollin' Toward the Top! Yahooo!
+    .delay(3400)
+    .animate({
+      bottom: '200px'
+      }, 2500);
+  };
+  });
+
+</script>
+</body>
+</html>

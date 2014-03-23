@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app allows users to find coffee shops that user fair trade, direct trade and organic beans. 
 
-Things you may want to cover:
+It will geolocate the user, with their permission, and will show them coffee shops within 5 miles of their location.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+It allows the user to add new coffee shops with yelp confirmation, editing the fair, direct trade or organic portion of the form.   

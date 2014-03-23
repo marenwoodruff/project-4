@@ -9,8 +9,15 @@ class Coffeeshop < ActiveRecord::Base
     validates :display_state, presence: true
     validates :display_zip, presence: true
 
-    geocoded_by :ip_address
-    after_validation :geocode, :if => :full_address_changed?
+    geocoded_by :full_address
+    reverse_geocoded_by :latitude, :longitude do |obj,results|
+        if geo = results.first
+            obj.city    = geo.city
+            obj.zipcode = geo.postal_code
+            obj.country = geo.country_code
+        end
+    end
+    after_validation :geocode
     
     def full_address
         "#{display_address}, #{display_city}, #{display_state} #{display_zip}"

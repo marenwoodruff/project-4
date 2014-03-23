@@ -417,6 +417,23 @@ Coffeeshop.create([
         url: 'http://gandbcoffee.com/'
     },
     {
+        name: 'Go Get Em Tiger', 
+        display_address: '230 N Larchmont Blvd', 
+        display_city: 'Los Angeles', 
+        display_state: 'CA',
+        display_zip: '90004', 
+        neighborhood: 'Windsor Square',
+        phone: '(213) 620-9668', 
+        fair_trade: nil,
+        organic: nil, 
+        direct_trade: true,        
+        yelp_rating: 4.0, 
+        yelp_review: 84,
+        yelp_id: 'go-get-em-tiger-los-angeles',
+        yelp_url: 'http://www.yelp.com/biz/go-get-em-tiger-los-angeles',
+        url: 'http://ggetla.com/'
+    },
+    {
         name: 'Groundworks', 
         display_address: '108 W 2nd St', 
         display_city: 'Los Angeles', 
@@ -536,6 +553,23 @@ Coffeeshop.create([
         url: 'http://www.groundworkcoffee.com/'
     },
     {
+        name: 'Handsome Coffee Roasters', 
+        display_address: '582 Mateo St', 
+        display_city: 'Los Angeles', 
+        display_state: 'CA',
+        display_zip: '90004', 
+        neighborhood: 'Downtown',
+        phone: '(213) 621-4194', 
+        fair_trade: nil,
+        organic: nil, 
+        direct_trade: true,        
+        yelp_rating: 3.5, 
+        yelp_review: 398,
+        yelp_id: 'handsome-coffee-roasters-los-angeles',
+        yelp_url: 'http://www.yelp.com/biz/handsome-coffee-roasters-los-angeles',
+        url: 'http://www.handsomecoffee.com/'
+    },
+    {
         name: 'Intelligentsia', 
         display_address: '3922 W Sunset Blvd', 
         display_city: 'Los Angeles', 
@@ -604,6 +638,23 @@ Coffeeshop.create([
         url: 'http://www.thebestcoffee.com/'
     },
     {
+        name: 'Lamill', 
+        display_address: '1636 Silver Lake Blvd', 
+        display_city: 'Los Angeles', 
+        display_state: 'CA', 
+        display_zip: '90026', 
+        neighborhood: 'Silver Lake',
+        phone: '(323) 663-4441', 
+        fair_trade: nil,
+        organic: nil,
+        direct_trade: true, 
+        yelp_rating: 3.5, 
+        yelp_review: 996,
+        yelp_id: 'lamill-coffee-los-angeles',
+        yelp_url: 'http://www.yelp.com/biz/lamill-coffee-los-angeles',
+        url: 'https://lamillcoffee.com/'
+    },
+    {
         name: 'Paper or Plastik', 
         display_address: '5772 West Pico Boulevard', 
         display_city: 'Los Angeles', 
@@ -655,6 +706,23 @@ Coffeeshop.create([
         url: 'http://www.socoffeela.com/'
     },
     {
+        name: 'Spring for Coffee', 
+        display_address: '548 S Spring St', 
+        display_city: 'Los Angeles', 
+        display_state: 'CA', 
+        display_zip: '90013', 
+        neighborhood: 'Downtown',
+        phone: '(213) 228-0041', 
+        fair_trade: nil,
+        organic: nil,
+        direct_trade: true, 
+        yelp_rating: 4.5, 
+        yelp_review: 261,
+        yelp_id: 'spring-for-coffee-los-angeles',
+        yelp_url: 'http://www.yelp.com/biz/spring-for-coffee-los-angeles',
+        url: 'http://www.springforcoffee.com/'
+    },
+    {
         name: 'The Refinery', 
         display_address: '413 Santa Monica Blvd', 
         display_state: 'Santa Monica', 
@@ -688,6 +756,23 @@ Coffeeshop.create([
         yelp_id: 'tiago-espresso-bar-kitchen-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/tiago-espresso-bar-kitchen-los-angeles',
         url: 'http://tiagocoffee.com/'
+    },
+    {
+        name: 'Two Guns Espresso', 
+        display_address: '350 N Sepulveda Blvd, Ste 7',
+        display_city: 'Manhattan Beach', 
+        display_state: 'CA',
+        display_zip: '90266', 
+        neighborhood: 'Manhattan Beach',
+        phone: '(310) 318-2537', 
+        fair_trade: nil,
+        organic: nil,
+        direct_trade: true, 
+        yelp_rating: 4.5, 
+        yelp_review: 237,
+        yelp_id: 'two-guns-espresso-manhattan-beach-2',
+        yelp_url: 'http://www.yelp.com/biz/two-guns-espresso-manhattan-beach-2',
+        url: 'http://www.twogunsespresso.com/'
     },
     {
         name: 'Urth Caffe', 

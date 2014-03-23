@@ -2,14 +2,13 @@ class CoffeeshopsController < ApplicationController
   before_action :set_coffeeshop, only: [:show, :edit, :update, :destroy]
 
   def index
+             # return a Geocoder::Result which corresponds to your location
     if params[:search].present?
       @coffeeshops = Coffeeshop.near(params[:search], 5).reverse # , :order => :distance
     #elsif params[:search_lat] && params[:search_lng]
       #@coffeeshops = Coffeeshop.near(Float(params[:search_lat]), Float(params[:search_lng]), 5)
     else
       @coffeeshops = Coffeeshop.all
-    # returns Geocoder::Result object
-    #result = request.location
     end
   end
 

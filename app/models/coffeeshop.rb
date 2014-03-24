@@ -19,6 +19,10 @@ class Coffeeshop < ActiveRecord::Base
     end
     after_validation :geocode
     
+    def distance
+        read_attribute :distance
+    end
+
     def full_address
         "#{display_address}, #{display_city}, #{display_state} #{display_zip}"
     end

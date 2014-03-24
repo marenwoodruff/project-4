@@ -4,8 +4,32 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 
 
+<div>
+  <p id="demo">Click the button to get your coordinates:</p>
+  <button class="button small" onclick="getLocation()">Locate Me</button>
+</div>
+  <script>
+    var x=document.getElementById("demo");
+    function getLocation()
+    {
+      if (navigator.geolocation)
+        {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        }
+      else{x.innerHTML="Geolocation is not supported by this browser.";}
+    }
+    function showPosition(position)
+    {
+      search_lat = position.coords.latitude
+      search_lng = position.coords.longitude
+      x.innerHTML="Latitude: " + search_lat +
+      "<br>Longitude: " + search_lng; 
+    }
 
-<br>
+</script>
+
+<br />
+
 
 <u><%= link_to 'Add a New Coffeeshop', new_coffeeshop_path %></u>
 

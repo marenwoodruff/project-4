@@ -264,6 +264,23 @@ Coffeeshop.create([
         url: 'http://www.caffeluxxe.com/'
     },
     {
+        name: 'Cafecito Organico', 
+        display_address: '2930 Bristol St. Ste B105', 
+        display_city: 'Costa Mesa', 
+        display_state: 'CA', 
+        display_zip: '92626', 
+        neighborhood: 'Costa Mesa',
+        phone: '(714) 394-2222', 
+        fair_trade: true,
+        organic: true,
+        direct_trade: nil, 
+        yelp_rating: 4.0, 
+        yelp_review: 88,
+        yelp_id: 'cafecito-organico-santa-monica',
+        yelp_url: 'http://www.yelp.com/biz/cafecito-organico-santa-monica',
+        url: 'http://www.cafecitoorganico.com/'
+    },
+    {
         name: 'Coffee Commissary', 
         display_address: '3121 W Olive Ave', 
         display_city: 'Burbank', 

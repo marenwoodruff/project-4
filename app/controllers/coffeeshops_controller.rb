@@ -3,11 +3,14 @@ class CoffeeshopsController < ApplicationController
 
   def index
     if params[:search].present?
-      @coffeeshops = Coffeeshop.near(params[:search], 5) # , :order => :distance
-    #elsif params[:search_lat] && params[:search_lng]
-      #@coffeeshops = Coffeeshop.near(Float(params[:search_lat]), Float(params[:search_lng]), 5)
+      @coffeeshops = Coffeeshop.near(params[:search][:address], 5) # , :order => :distance
+    elsif params[:search_lat] && params[:search_lng]
+      @coffeeshops = Coffeeshop.near([params[:search_lat], params[:search_lng]], params[:distance] || 5)
     else
       @coffeeshops = Coffeeshop.all
+
+    # else
+    #   @coffeeshops = Coffeeshop.all
     # returns Geocoder::Result object
     #result = request.location
     end
@@ -56,6 +59,7 @@ class CoffeeshopsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     

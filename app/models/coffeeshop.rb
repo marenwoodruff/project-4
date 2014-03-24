@@ -11,12 +11,12 @@ class Coffeeshop < ActiveRecord::Base
 
     geocoded_by :ip_address
     after_validation :geocode, :if => :full_address_changed?
+    # reverse_geocoded_by :latitude, :longitude,
+    # :address => :location
+    # after_validation :reverse_geocode
     
     def full_address
         "#{display_address}, #{display_city}, #{display_state} #{display_zip}"
-    end
-
-    def current_location
     end
 
 end

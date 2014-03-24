@@ -689,6 +689,23 @@ Coffeeshop.create([
         url: 'http://primopassocoffee.com/'
     },
     {
+        name: 'Red Bread', 
+        display_address: '13322 W Washington Blvd', 
+        display_city: 'Culver City', 
+        display_state: 'CA', 
+        display_zip: '90066',
+        neighborhood: 'Culver City', 
+        phone: '(424) 272-5752', 
+        fair_trade: true,
+        organic: true,
+        direct_trade: nil, 
+        yelp_rating: 4.0, 
+        yelp_review: 32,
+        yelp_id: 'red-bread-culver-city',
+        yelp_url: 'http://www.yelp.com/biz/red-bread-culver-city',
+        url: 'http://www.thebreadisred.com/'
+    },
+    {
         name: 'Single Origin', 
         display_address: 'Farmers Market, 6333 West 3rd Street Stall #316', 
         display_city: 'Los Angeles', 

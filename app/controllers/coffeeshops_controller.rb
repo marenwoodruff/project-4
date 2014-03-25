@@ -3,8 +3,8 @@ class CoffeeshopsController < ApplicationController
 
   def index
     # return a Geocoder::Result which corresponds to your location
-    if params[:search].present?
-      @coffeeshops = Coffeeshop.near(params[:search], 5).reverse # , :order => :distance
+    if params[:search].present? && Coffeeshop.present?
+      @coffeeshops = Coffeeshop.near(params[:search], 5).reverse
     elsif params[:search_lat] && params[:search_lng]
        @coffeeshops = Coffeeshop.near([params[:search_lat], params[:search_lng]], params[:distance] || 5)
     else

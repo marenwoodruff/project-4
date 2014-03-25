@@ -20,6 +20,7 @@
     }
     function showPosition(position)
     {
+      handler.map.centerOn(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
       search_lat = position.coords.latitude
       search_lng = position.coords.longitude
       x.innerHTML="Latitude: " + search_lat +
@@ -48,11 +49,11 @@
 
 <!-- Our gmaps4rails handler scripts -->
 <script type="text/javascript">
-  handler = Gmaps.build('Google');
+  var handler = Gmaps.build('Google');
   // provider is where we pass in mapOptions like zoom, and our API key (not required)
   // internal is where we tell the map where to render and set options like   markers, bounds, etc.
 
-  handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas'}}, function(){
+  var ourMap = handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas'}}, function(){
     // <% @coffeeshops.each do |coffeeshop| %>
     markers = handler.addMarkers([
       {

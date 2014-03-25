@@ -31,15 +31,15 @@
       // "<br>Longitude: " + search_lng; 
       // @coffeeshop.distance_to(search_lat, search_lng)
 
-    marker2 = handler.addMarkers([
+      marker2 = handler.addMarkers([
       {
         lat: search_lat, // pulls in the latitude for the marker via ERB
         lng: search_lng, // pulls in the longitude for the marker via ERB
         picture: {
-        url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-        width:  36,
-        height: 36
-      },
+          url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+          width:  36,
+          height: 36
+        },
         infowindow: 'You are here' // info window text (this is optional)
       }])
     }
@@ -77,6 +77,12 @@
       {
         lat: <%=coffeeshop.latitude%>, // pulls in the latitude for the marker via ERB
         lng: <%=coffeeshop.longitude%>, // pulls in the longitude for the marker via ERB
+        picture: {
+          url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+          width:  36,
+          height: 36
+        },
+        animation: google.maps.Animation.DROP,
         infowindow: '<%= link_to "#{coffeeshop.name}", coffeeshop_path(coffeeshop) %>' // info window text (this is optional)
       }
     ]);

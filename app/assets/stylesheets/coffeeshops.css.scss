@@ -6,6 +6,9 @@
     height: 500px;
     width: 500px;
     margin: 0 auto;
+    float:left;
+    margin-left: 100px;
+    margin-top: 15px;
 }
 #map-canvas img { 
   max-width: none;
@@ -25,12 +28,22 @@
     font-family: 'Abril Fatface', cursive;
 }
 
+@media (max-width: 1025px){
+  #map-canvas {
+    margin-left: 75px;
+  }
+}
 
 @media (max-width: 770px){
   #map-canvas {
     height: 400px;
     width: 400px;
     margin: 0 auto;
+    float: center;
+    margin-top: 15px;
+  }
+  #nearby-locations {
+  margin-top: 15px;
   }
 }
 

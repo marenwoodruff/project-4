@@ -33,7 +33,7 @@
 
 <u><%= link_to 'Add a New Coffeeshop', new_coffeeshop_path %></u>
 
-<div class="medium-6" id="map-div">
+<div class="small-10 medium-6" id="map-div">
   <h1>Coffee Shops</h1>
   <%= form_tag coffeeshops_path, :method => :get do %>
     <p>
@@ -43,12 +43,12 @@
     </p>
   <% end %>
     <!-- The "canvas," where our map is rendered -->
-  <div id="map-canvas"></div>
+  <div class="small-6" id="map-canvas"></div>
 </div>
 
 <!-- Our gmaps4rails handler scripts -->
 <script type="text/javascript">
-handler = Gmaps.build('Google');
+  handler = Gmaps.build('Google');
   // provider is where we pass in mapOptions like zoom, and our API key (not required)
   // internal is where we tell the map where to render and set options like   markers, bounds, etc.
 

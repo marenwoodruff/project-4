@@ -38,7 +38,7 @@
   <%= form_tag coffeeshops_path, :method => :get do %>
     <p>
       <%= text_field_tag :search, params[:search], :placeholder => "Enter your location" %>
-      <%= @city %>
+      <%#= @city %>
       <%= submit_tag "Search Near", :name => nil %>
     </p>
   <% end %>
@@ -53,7 +53,7 @@ handler = Gmaps.build('Google');
   // internal is where we tell the map where to render and set options like   markers, bounds, etc.
 
   handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas'}}, function(){
-    <% @coffeeshops.each do |coffeeshop| %>
+    // <% @coffeeshops.each do |coffeeshop| %>
     markers = handler.addMarkers([
       {
         lat: <%=coffeeshop.latitude%>, // pulls in the latitude for the marker via ERB
@@ -61,7 +61,7 @@ handler = Gmaps.build('Google');
         infowindow: '<%= link_to "#{coffeeshop.name}", coffeeshop_path(coffeeshop) %>' // info window text (this is optional)
       }
     ]);
-    <% end %>
+    // <% end %>
     handler.map.centerOn(markers[0]); // centers on the first marker in the array
   });
 

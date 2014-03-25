@@ -23,6 +23,14 @@ class Coffeeshop < ActiveRecord::Base
         read_attribute :distance
     end
 
+    def search
+        if name
+        elsif display_city 
+        elsif display_state
+        elsif display_zip
+        end 
+    end
+
     def full_address
         "#{display_address}, #{display_city}, #{display_state} #{display_zip}"
     end

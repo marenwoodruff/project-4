@@ -24,3 +24,19 @@ h4 {
 .field {
     font-family: 'Abril Fatface', cursive;
 }
+
+
+@media (max-width: 770px){
+    h1 {
+        font-size: 60px;
+    }
+
+}
+
+
+@media (max-width: 500px){
+    h1 {
+        font-size: 50px;
+    }
+
+}

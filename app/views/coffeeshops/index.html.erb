@@ -60,7 +60,6 @@
   <%= form_tag coffeeshops_path, :method => :get do %>
     <p>
       <%= text_field_tag :search, params[:search], :placeholder => "Enter your location" %>
-      <%#= @city %>
       <%= submit_tag "Search Shops", :name => nil %>
     </p>
   <% end %>
@@ -88,7 +87,7 @@
   handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas1'}}, function(){
     <% if @coffeeshops.empty? %>
       $("#noLocation").css("display", "block");
-      setTimeout('getLocation(true);', 2000);
+      setTimeout('getLocation(true);', 1000);
       return;
     <% end %>
     <% @coffeeshops.each do |coffeeshop| %>

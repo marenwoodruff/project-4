@@ -1,5 +1,4 @@
 <%= render partial: 'layouts/navbar' %>
-<%#= render partial: 'coffeeshop_list' %> 
 
 <h1>Coffee Shops</h1>
 
@@ -14,16 +13,19 @@
 </div>
   <script>
     var x=document.getElementById("demo");
-    function getLocation()
+    function getLocation(is_refresh)
     {
       if (navigator.geolocation)
         {
-        navigator.geolocation.getCurrentPosition(showPosition);
+          window.should_do_refresh_later = is_refresh;
+          navigator.geolocation.getCurrentPosition(showPosition);
         }
       else{x.innerHTML="Geolocation is not supported by this browser.";}
     }
     function showPosition(position)
     {
+      if(should_do_refresh_later && location.href.indexOf("?search_lat=") == -1)
+        location.href=location.href + "?search_lat=" + position.coords.latitude + "&search_lng=" + position.coords.longitude;
       handler.map.centerOn(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
       search_lat = position.coords.latitude
       search_lng = position.coords.longitude
@@ -33,21 +35,17 @@
 
       marker2 = handler.addMarkers([
       {
-        lat: search_lat, // pulls in the latitude for the marker via ERB
-        lng: search_lng, // pulls in the longitude for the marker via ERB
+        lat: search_lat, 
+        lng: search_lng, 
         picture: {
           url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
           width:  36,
           height: 36
         },
-        infowindow: 'You are here' // info window text (this is optional)
+        infowindow: 'You are here' // info window text 
       }])
     }
 </script>
-
-<!-- <br /> -->
-
-
 
 
 <div class="small-10 medium-6" id="map-div">
@@ -72,7 +70,11 @@
   // internal is where we tell the map where to render and set options like   markers, bounds, etc.
 
   handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas'}}, function(){
-    // <% @coffeeshops.each do |coffeeshop| %>
+    <% if @coffeeshops.empty? %>
+      getLocation(true);
+      return;
+    <% end %>
+    <% @coffeeshops.each do |coffeeshop| %>
     markers = handler.addMarkers([
       {
         lat: <%=coffeeshop.latitude%>, // pulls in the latitude for the marker via ERB
@@ -82,11 +84,10 @@
           width:  36,
           height: 36
         },
-        animation: google.maps.Animation.DROP,
         infowindow: '<%= link_to "#{coffeeshop.name}", coffeeshop_path(coffeeshop) %>' // info window text (this is optional)
       }
     ]);
-    // <% end %>
+    <% end %>
     handler.map.centerOn(markers[0]); // centers on the first marker in the array
   });
 

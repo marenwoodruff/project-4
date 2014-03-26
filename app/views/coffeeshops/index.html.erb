@@ -6,26 +6,33 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 
 
-<div>
+<!-- <div>
   <p id="demo">Click the button to locate shops near you:
   <button class="button small" onclick="getLocation()">Locate Me</button>
   </p>
-</div>
+</div> -->
   <script>
     var x=document.getElementById("demo");
-    function getLocation()
+    function getLocation(is_refresh)
     {
       if (navigator.geolocation)
         {
-          // window.should_do_refresh_later = is_refresh;
+          window.should_do_refresh_later = is_refresh;
           navigator.geolocation.getCurrentPosition(showPosition);
         }
       else{x.innerHTML="Geolocation is not supported by this browser.";}
     }
     function showPosition(position)
     {
-      // if(should_do_refresh_later && location.href.indexOf("?search_lat=") == -1)
-      //   location.href=location.href + "?search_lat=" + position.coords.latitude + "&search_lng=" + position.coords.longitude;
+      if(should_do_refresh_later && location.href.indexOf("?search_lat=") == -1)
+        { 
+          var newUrl = location.href
+          var idx = newUrl.indexOf("?");
+          if (idx >= 0){
+            newUrl = newUrl.substring(0,idx);
+          }
+          location.href = newUrl + "?search_lat=" + position.coords.latitude + "&search_lng=" + position.coords.longitude; 
+        }
       handler.map.centerOn(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
       search_lat = position.coords.latitude
       search_lng = position.coords.longitude
@@ -57,10 +64,19 @@
       <%= submit_tag "Search Shops", :name => nil %>
     </p>
   <% end %>
+</div>
+
+<div>
+  <div id="noLocation" style="display: none">
+    Oh no! We lost you!
+  </div>
     <!-- The "canvas," where our map is rendered -->
-  <div class="small-6" id="map-canvas"></div>
+  <div class="small-6" id="map-canvas1"></div>
+  
   <h4>Nearby locations</h4>
- 
+  <% for coffeeshop in @coffeeshops %>
+    <li><%= link_to coffeeshop.name, coffeeshop %>, (<%= coffeeshop.distance.round(2) %> miles)</li>
+  <% end %>
 </div>
 
 <!-- Our gmaps4rails handler scripts -->
@@ -69,11 +85,12 @@
   // provider is where we pass in mapOptions like zoom, and our API key (not required)
   // internal is where we tell the map where to render and set options like   markers, bounds, etc.
 
-  handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas'}}, function(){
-    // <#% if @coffeeshops.empty? %>
-    //   getLocation(true);
-    //   return;
-    // <#% end %>
+  handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas1'}}, function(){
+    <% if @coffeeshops.empty? %>
+      $("#noLocation").css("display", "block");
+      setTimeout('getLocation(true);', 2000);
+      return;
+    <% end %>
     <% @coffeeshops.each do |coffeeshop| %>
     markers = handler.addMarkers([
       {

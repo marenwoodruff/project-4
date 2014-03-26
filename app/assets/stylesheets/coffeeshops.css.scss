@@ -2,20 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#map-canvas1 {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    float: left;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#map-canvas1 img { 
+  max-width: none;
+}
+
+#map-canvas1 label { 
+  width: auto; 
+  display: inline; 
+}
+
 #map-canvas {
     height: 500px;
     width: 500px;
     margin: 0 auto;
-    float:left;
+    float: left;
     margin-left: 100px;
     margin-top: 15px;
 }
+
 #map-canvas img { 
   max-width: none;
 }
 
 #map-canvas label { 
-  width: auto; display:inline; 
+  width: auto; 
+  display: inline; 
 } 
 
 #map-div {
@@ -29,12 +49,23 @@
 }
 
 @media (max-width: 1025px){
+  #map-canvas1 {
+    margin-left: 75px;
+  }
   #map-canvas {
     margin-left: 75px;
   }
 }
 
 @media (max-width: 770px){
+  #map-canvas1 {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    float: center;
+    margin-top: 15px;
+  }
+
   #map-canvas {
     height: 400px;
     width: 400px;
@@ -48,6 +79,11 @@
 }
 
 @media (max-width: 400px){
+  #map-canvas1 {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+  }
   #map-canvas {
     height: 300px;
     width: 300px;

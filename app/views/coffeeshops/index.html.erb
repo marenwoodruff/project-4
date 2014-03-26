@@ -13,11 +13,11 @@
 </div>
   <script>
     var x=document.getElementById("demo");
-    function getLocation(is_refresh)
+    function getLocation()
     {
       if (navigator.geolocation)
         {
-          window.should_do_refresh_later = is_refresh;
+          // window.should_do_refresh_later = is_refresh;
           navigator.geolocation.getCurrentPosition(showPosition);
         }
       else{x.innerHTML="Geolocation is not supported by this browser.";}

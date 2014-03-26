@@ -24,8 +24,8 @@
     }
     function showPosition(position)
     {
-      if(should_do_refresh_later && location.href.indexOf("?search_lat=") == -1)
-        location.href=location.href + "?search_lat=" + position.coords.latitude + "&search_lng=" + position.coords.longitude;
+      // if(should_do_refresh_later && location.href.indexOf("?search_lat=") == -1)
+      //   location.href=location.href + "?search_lat=" + position.coords.latitude + "&search_lng=" + position.coords.longitude;
       handler.map.centerOn(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
       search_lat = position.coords.latitude
       search_lng = position.coords.longitude

@@ -70,10 +70,10 @@
   // internal is where we tell the map where to render and set options like   markers, bounds, etc.
 
   handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas'}}, function(){
-    <% if @coffeeshops.empty? %>
-      getLocation(true);
-      return;
-    <% end %>
+    // <#% if @coffeeshops.empty? %>
+    //   getLocation(true);
+    //   return;
+    // <#% end %>
     <% @coffeeshops.each do |coffeeshop| %>
     markers = handler.addMarkers([
       {

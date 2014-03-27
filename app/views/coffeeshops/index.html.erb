@@ -82,7 +82,7 @@
       setTimeout('getLocation(true);', 1000);
       return;
     <% end %>
-    <% @coffeeshops.each do |coffeeshop| %>
+    <% @coffeeshops.sort {|a,b| b.distance <=> a.distance }.each do |coffeeshop| %>
     markers = handler.addMarkers([
       {
         lat: <%=coffeeshop.latitude%>, // pulls in the latitude for the marker via ERB

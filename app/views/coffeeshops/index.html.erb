@@ -65,8 +65,8 @@
   <div class="small-6" id="map-canvas1"></div>
   
   <h4>Nearby locations</h4>
-  <% for coffeeshop in @coffeeshops %>
-    <li><%= link_to coffeeshop.name, coffeeshop %>, (<%= coffeeshop.distance.round(2) %> miles)</li>
+  <% (@coffeeshops.count-1).downto(0) do |i| %>
+    <li><%= link_to @coffeeshops[i].name, @coffeeshops[i] %>, (<%= @coffeeshops[i].distance.round(2) %> miles)</li>
   <% end %>
 </div>
 
@@ -82,7 +82,7 @@
       setTimeout('getLocation(true);', 1000);
       return;
     <% end %>
-    <% @coffeeshops.reverse.each do |coffeeshop| %>
+    <% @coffeeshops.each do |coffeeshop| %>
     markers = handler.addMarkers([
       {
         lat: <%=coffeeshop.latitude%>, // pulls in the latitude for the marker via ERB

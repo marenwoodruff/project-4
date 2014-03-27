@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Add coffeeshop page */
+
+.form {
+  margin-left: 450px;
+}
+
+/* Index and Show page */
+
 #map-canvas1 {
     height: 500px;
     width: 500px;
@@ -73,8 +81,18 @@
     float: center;
     margin-top: 15px;
   }
+
   #nearby-locations {
-  margin-top: 15px;
+    margin-top: 15px;
+  }
+  .form {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 650px){
+  .form {
+    margin-left: 0px;
   }
 }
 
@@ -90,6 +108,8 @@
     margin: 0 auto;
   }
 }
+
+
 
 
 

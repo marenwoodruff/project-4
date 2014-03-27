@@ -1,79 +1,80 @@
-<%= form_for(@coffeeshop) do |f| %>
-  <% if @coffeeshop.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@coffeeshop.errors.count, "error") %> prohibited this coffeeshop from being saved:</h2>
+<div class="form">
+  <%= form_for(@coffeeshop) do |f| %>
+    <% if @coffeeshop.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@coffeeshop.errors.count, "error") %> prohibited this coffeeshop from being saved:</h2>
 
-      <ul>
-      <% @coffeeshop.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @coffeeshop.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="medium-6 small-10">
+    <div class="field">
+      <%= f.label :Name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :Address %><br>
+      <%= f.text_field :display_address %>
+    </div>
+    <div class="field">
+      <%= f.label :City %><br>
+      <%= f.text_field :display_city %>
+    </div>
+    <div class="field">
+      <%= f.label :State %><br>
+      <%= f.text_field :display_state %>
+    </div>
+    <div class="field">
+      <%= f.label :Zip %><br>
+      <%= f.text_field :display_zip %>
+    </div>
+    <div class="field">
+      <%= f.label :Neighborhood %><br>
+      <%= f.text_field :neighborhood %>
+    </div>
+    <div class="field">
+      <%= f.label :Phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="field">
+      <%= f.label :Fair_trade %><br>
+      <%= f.text_field :fair_trade %>
+    </div>
+    <div class="field">
+      <%= f.label :Organic %><br>
+      <%= f.text_field :organic %>
+    </div>
+    <div class="field">
+      <%= f.label :Direct_trade %><br>
+      <%= f.text_field :direct_trade %>
+    </div>
+    <div class="field">
+      <%= f.label :yelp_rating %><br>
+      <%= f.text_field :yelp_rating %>
+    </div>
+    <div class="field">
+      <%= f.label :yelp_review %><br>
+      <%= f.number_field :yelp_review %>
+    </div>
+    <!-- <div class="field">
+      <%#= f.label :yelp_id %><br>
+      <%#= f.text_field :yelp_id %>
+    </div> -->
+    <div class="field">
+      <%= f.label :yelp_url %><br>
+      <%= f.text_field :yelp_url %>
+    </div>
+    <div class="field">
+      <%= f.label :url %><br>
+      <%= f.text_field :url %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-<div class="medium-6">
-  <div class="field">
-    <%= f.label :Name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :Address %><br>
-    <%= f.text_field :display_address %>
-  </div>
-  <div class="field">
-    <%= f.label :City %><br>
-    <%= f.text_field :display_city %>
-  </div>
-  <div class="field">
-    <%= f.label :State %><br>
-    <%= f.text_field :display_state %>
-  </div>
-  <div class="field">
-    <%= f.label :Zip %><br>
-    <%= f.text_field :display_zip %>
-  </div>
-  <div class="field">
-    <%= f.label :Neighborhood %><br>
-    <%= f.text_field :neighborhood %>
-  </div>
-  <div class="field">
-    <%= f.label :Phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :Fair_trade %><br>
-    <%= f.text_field :fair_trade %>
-  </div>
-  <div class="field">
-    <%= f.label :Organic %><br>
-    <%= f.text_field :organic %>
-  </div>
-  <div class="field">
-    <%= f.label :Direct_trade %><br>
-    <%= f.text_field :direct_trade %>
-  </div>
-  <div class="field">
-    <%= f.label :yelp_rating %><br>
-    <%= f.text_field :yelp_rating %>
-  </div>
-  <div class="field">
-    <%= f.label :yelp_review %><br>
-    <%= f.number_field :yelp_review %>
-  </div>
-  <!-- <div class="field">
-    <%#= f.label :yelp_id %><br>
-    <%#= f.text_field :yelp_id %>
-  </div> -->
-  <div class="field">
-    <%= f.label :yelp_url %><br>
-    <%= f.text_field :yelp_url %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
 </div>

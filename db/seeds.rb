@@ -5,9 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Coffeeshop.destroy_all
+#Coffeeshop.destroy_all
 
-Coffeeshop.create([
+coffeeshops = Coffeeshop.create([
     {
         name: "Alfred Coffee & Kitchen", 
         display_address: "8428 Melrose Place A",

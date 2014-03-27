@@ -2,19 +2,19 @@ class CoffeeshopsController < ApplicationController
   before_action :set_coffeeshop, only: [:show, :edit, :update, :destroy]
 
   def index
-    # return a Geocoder::Result which corresponds to your location
+    # return a Geocoder::Result which corresponds to your location  
     if params[:search].present? 
       respond_to do |format|
         format.html {@coffeeshops = Coffeeshop.near(params[:search], 5).reverse}
         format.json {@coffeeshops = Coffeeshop.near(params[:search], 5)}
-      end
-    else params[:search_lat] && params[:search_lng]
+      end  
+    elsif params[:search_lat] && params[:search_lng]
       respond_to do |format|
         format.html { @coffeeshops = Coffeeshop.near([params[:search_lat], params[:search_lng]], params[:distance] || 5).reverse }
-        format.json { @coffeeshops = Coffeeshop.near([params[:search_lat], params[:search_lng]], params[:distance] || 5) }
-      end 
-    # else
-    #   @coffeeshops = Coffeeshop.all
+        format.json { @coffeeshops = Coffeeshop.near([params[:search_lat], params[:search_lng]], params[:distance] || 5) } 
+      end
+    else
+      @coffeeshops = Coffeeshop.all
     end
   end
 

@@ -23,7 +23,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "alfred-coffee-and-kitchen-los-angeles", 
         yelp_rating:4.5, 
         yelp_review:161, 
-        yelp_url:"http://www.yelp.com/biz/alfred-coffee-and-kitchen-los-angeles"
+        yelp_url:"http://www.yelp.com/biz/alfred-coffee-and-kitchen-los-angeles",
+        latitude: 34.083366,
+        longitude: -118.374309
     },
     {
         name: "Antigua Coffee", 
@@ -40,7 +42,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "antigua-coffee-Los-Angeles",
         yelp_rating:4, 
         yelp_review:129, 
-        yelp_url: "http://www.yelp.com/biz/antigua-coffee-los-angeles"
+        yelp_url: "http://www.yelp.com/biz/antigua-coffee-los-angeles",
+        latitude: 34.0874118,
+        longitude: -118.217485
     },
     {
         name: 'Balconi Coffee Company', 
@@ -57,7 +61,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 344,
         yelp_id: 'balconi-coffee-company-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/balconi-coffee-company-los-angeles',
-        url: 'http://www.balconicoffeecompany.com/'
+        url: 'http://www.balconicoffeecompany.com/',
+        latitude: 34.0380128,
+        longitude: -118.4418103
     },
     {
         name: "Barista Society Coffee Boutique", 
@@ -74,7 +80,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "barista-society-coffee-boutique-los-angeles", 
         yelp_rating:5, 
         yelp_review:98, 
-        yelp_url: "http://www.yelp.com/biz/barista-society-coffee-boutique-los-angeles"
+        yelp_url: "http://www.yelp.com/biz/barista-society-coffee-boutique-los-angeles",
+        latitude: 34.051038,
+        longitude: -118.254436
     },
     {
         name:"Black Dog Coffee", 
@@ -91,7 +99,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id:"black-dog-coffee-los-angeles", 
         yelp_rating: 3.5, 
         yelp_review:155,
-        yelp_url:"http://www.yelp.com/biz/black-dog-coffee-los-angeles"
+        yelp_url:"http://www.yelp.com/biz/black-dog-coffee-los-angeles",
+        latitude: 34.062765,
+        longitude: -118.35187
     },
     {
         name: "Bourbon Street Cafe", 
@@ -108,7 +118,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "bourbon-street-cafe-los-angeles", 
         yelp_rating:4, 
         yelp_review:207, 
-        yelp_url: "http://www.yelp.com/biz/bourbon-street-cafe-los-angeles"
+        yelp_url: "http://www.yelp.com/biz/bourbon-street-cafe-los-angeles",
+        latitude: 34.060116,
+        longitude: -118.291278
     },
     {
         name: "Bourgeois Pig", 
@@ -125,7 +137,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "bourgeois-pig-los-angeles", 
         yelp_rating:4, 
         yelp_review:437, 
-        yelp_url: "http://www.yelp.com/biz/bourgeois-pig-los-angeles"
+        yelp_url: "http://www.yelp.com/biz/bourgeois-pig-los-angeles",
+        latitude: 34.1053735,
+        longitude: -118.3190009
     },
     {
         name: "Bru Coffee Bar", 
@@ -142,7 +156,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "bru-coffeebar-los-angeles-2", 
         yelp_rating:3.5, 
         yelp_review:174, 
-        yelp_url:"http://www.yelp.com/biz/bru-coffeebar-los-angeles-2"
+        yelp_url:"http://www.yelp.com/biz/bru-coffeebar-los-angeles-2",
+        latitude: 34.104947,
+        longitude: -118.2915327
     },
     {
         name: "Brew/Well", 
@@ -159,7 +175,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "brewwell-los-angeles", 
         yelp_rating:4.5, 
         yelp_review:115, 
-        yelp_url:"http://www.yelp.com/biz/brewwell-los-angeles"
+        yelp_url:"http://www.yelp.com/biz/brewwell-los-angeles",
+        latitude: 34.0580418,
+        longitude: -118.3071801
     },
     {
         name: "Cacao Coffee House", 
@@ -176,7 +194,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "cacao-coffee-house-los-angeles", 
         yelp_rating:3.5, 
         yelp_review:135, 
-        yelp_url:"http://www.yelp.com/biz/cacao-coffee-house-los-angeles"
+        yelp_url:"http://www.yelp.com/biz/cacao-coffee-house-los-angeles",
+        latitude: 34.0446,
+        longitude: -118.4541679
     },
     {
         name: "Cafe De Leche", 
@@ -193,7 +213,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id: "caf%C3%A9-de-leche-los-angeles-2", 
         yelp_rating:4, 
         yelp_review:289, 
-        yelp_url:"http://www.yelp.com/biz/caf%C3%A9-de-leche-los-angeles-2"
+        yelp_url:"http://www.yelp.com/biz/caf%C3%A9-de-leche-los-angeles-2",
+        latitude: 34.1214403,
+        longitude: -118.2068745
     },
     {
         name: "Cafe Demitasse", 
@@ -210,7 +232,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 447, 
         yelp_id: "demitasse-los-angeles", 
         yelp_url:"http://www.yelp.com/biz/demitasse-los-angeles",
-        url: "http://cafedemitasse.com/"
+        url: "http://cafedemitasse.com/",
+        latitude: 34.0498402,
+        longitude: -118.2413833
     },
     {
         name: "Cafe Demitasse", 
@@ -227,7 +251,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 89, 
         yelp_id: "demitasse-santa-monica-santa-monica", 
         yelp_url:"http://www.yelp.com/biz/demitasse-santa-monica-santa-monica",
-        url: "http://cafedemitasse.com/"
+        url: "http://cafedemitasse.com/",
+        latitude: 34.0188173,
+        longitude: -118.499444
     },
     {
         name:"Cafe Dulce", 
@@ -244,7 +270,9 @@ coffeeshops = Coffeeshop.create([
         yelp_id:"cafe-dulce-los-angeles", 
         yelp_rating:4, 
         yelp_review: 870,
-        yelp_url: "http://www.yelp.com/biz/cafe-dulce-los-angeles"
+        yelp_url: "http://www.yelp.com/biz/cafe-dulce-los-angeles",
+        latitude: 34.0490563,
+        longitude: -118.2399017
     },
     {
         name: 'Caffe Luxxe', 
@@ -261,7 +289,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 94,
         yelp_id: 'caffe-luxxe-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/caffe-luxxe-los-angeles',
-        url: 'http://www.caffeluxxe.com/'
+        url: 'http://www.caffeluxxe.com/',
+        latitude: 34.0526081,
+        longitude: -118.4718797
     },
     {
         name: 'Caffe Luxxe', 
@@ -278,7 +308,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 261,
         yelp_id: 'caffe-luxxe-santa-monica',
         yelp_url: 'http://http://www.yelp.com/biz/caffe-luxxe-santa-monica',
-        url: 'http://www.caffeluxxe.com/'
+        url: 'http://www.caffeluxxe.com/',
+        latitude: 34.029062,
+        longitude: -118.4994033
     },
     {
         name: 'Caffe Luxxe', 
@@ -295,7 +327,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 41,
         yelp_id: 'caffe-luxxe-santa-monica-2',
         yelp_url: 'http://www.yelp.com/biz/caffe-luxxe-santa-monica-2',
-        url: 'http://www.caffeluxxe.com/'
+        url: 'http://www.caffeluxxe.com/',
+        latitude: 34.0475109,
+        longitude: -118.4904307
     },
     {
         name: 'Cafecito Organico', 
@@ -312,7 +346,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 88,
         yelp_id: 'cafecito-organico-santa-monica',
         yelp_url: 'http://www.yelp.com/biz/cafecito-organico-santa-monica',
-        url: 'http://www.cafecitoorganico.com/'
+        url: 'http://www.cafecitoorganico.com/',
+        latitude: 33.6775633,
+        longitude: -117.886193
     },
     {
         name: 'Coffee Commissary', 
@@ -329,7 +365,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 90,
         yelp_id: 'coffee-commissary-burbank',
         yelp_url: 'http://www.yelp.com/biz/coffee-commissary-burbank',
-        url: 'http://www.coffeecommissary.com/'
+        url: 'http://www.coffeecommissary.com/',
+        latitude: 34.1560937,
+        longitude: -118.3351648
     },
     {
         name: 'Coffee Commissary', 
@@ -346,7 +384,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 345,
         yelp_id: 'coffee-commissary-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/coffee-commissary-los-angeles',
-        url: 'http://www.coffeecommissary.com/'
+        url: 'http://www.coffeecommissary.com/',
+        latitude: 34.0856597,
+        longitude: -118.3617018
     },
     {
         name: 'Coffee Commissary', 
@@ -363,7 +403,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 16,
         yelp_id: 'coffee-commissary-los-angeles-2',
         yelp_url: 'http://www.yelp.com/biz/coffee-commissary-los-angeles-2',
-        url: 'http://www.coffeecommissary.com/'
+        url: 'http://www.coffeecommissary.com/',
+        latitude: 34.098346,
+        longitude: -118.321765
     },
     {
         name: 'Cognoscenti', 
@@ -380,7 +422,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 70,
         yelp_id: 'cognoscenti-coffee-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/cognoscenti-coffee-los-angeles',
-        url: 'http://www.popupcoffee.com'
+        url: 'http://www.popupcoffee.com',
+        latitude: 34.1169451,
+        longitude: -118.261584
     },
     {
         name: 'Cognoscenti', 
@@ -397,7 +441,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 70,
         yelp_id: 'cognoscenti-coffee-culver-city-2',
         yelp_url: 'http://www.yelp.com/biz/cognoscenti-coffee-culver-city-2',
-        url: 'http://www.popupcoffee.com'
+        url: 'http://www.popupcoffee.com',
+        latitude: 34.0311017,
+        longitude: -118.3778009
     },
     {
         name: 'Espresso Cielo', 
@@ -414,7 +460,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 136,
         yelp_id: 'espresso-cielo-palm-springs',
         yelp_url: 'http://www.yelp.com/biz/espresso-cielo-palm-springs',
-        url: 'http://espressocielo.com/'
+        url: 'http://espressocielo.com/',
+        latitude: 33.8204066,
+        longitude: -116.5469791
     },
     {
         name: 'Espresso Cielo', 
@@ -431,7 +479,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 150,
         yelp_id: 'espresso-cielo-santa-monica',
         yelp_url: 'http://www.yelp.com/biz/espresso-cielo-santa-monica',
-        url: 'http://espressocielo.com/'
+        url: 'http://espressocielo.com/',
+        latitude: 33.9980574,
+        longitude: -118.4793631
     },
     {
         name: 'Espresso Profeta', 
@@ -448,7 +498,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 343,
         yelp_id: 'espresso-profeta-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/espresso-profeta-los-angeles',
-        url: 'https://plus.google.com/115896672597873192051/about?gl=us&hl=en'
+        url: 'https://plus.google.com/115896672597873192051/about?gl=us&hl=en',
+        latitude: 34.0602329,
+        longitude: -118.444205
     },
     {
         name: 'G&B', 
@@ -465,7 +517,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 104,
         yelp_id: 'g-and-b-coffee-los-angeles-2',
         yelp_url: 'http://www.yelp.com/biz/g-and-b-coffee-los-angeles-2',
-        url: 'http://gandbcoffee.com/'
+        url: 'http://gandbcoffee.com/',
+        latitude: 34.05081,
+        longitude: -118.249409
     },
     {
         name: 'Go Get Em Tiger', 
@@ -482,7 +536,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 84,
         yelp_id: 'go-get-em-tiger-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/go-get-em-tiger-los-angeles',
-        url: 'http://ggetla.com/'
+        url: 'http://ggetla.com/',
+        latitude: 34.0755874,
+        longitude: -118.3232999
     },
     {
         name: 'Groundworks', 
@@ -499,7 +555,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 84,
         yelp_id: 'groundwork-coffee-co-los-angeles-4',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-co-los-angeles-4',
-        url: 'http://www.groundworkcoffee.com/'
+        url: 'http://www.groundworkcoffee.com/',
+        latitude: 34.0510613,
+        longitude: -118.244705
     },
     {
         name: 'Groundworks', 
@@ -516,7 +574,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 258,
         yelp_id: 'groundwork-coffee-company-los-angeles-7',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-company-los-angeles-7',
-        url: 'http://www.groundworkcoffee.com/'
+        url: 'http://www.groundworkcoffee.com/',
+        latitude: 34.0981674,
+        longitude: -118.3297713
     },
     {
         name: 'Groundworks', 
@@ -533,7 +593,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 27,
         yelp_id: 'groundwork-coffee-company-santa-monica-3',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-company-santa-monica-3',
-        url: 'http://www.groundworkcoffee.com/'
+        url: 'http://www.groundworkcoffee.com/',
+        latitude: 34.0339824,
+        longitude: -118.493368
     },
     {
         name: 'Groundworks', 
@@ -550,7 +612,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 58,
         yelp_id: 'groundwork-coffee-company-santa-monica-2',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-company-santa-monica-2',
-        url: 'http://www.groundworkcoffee.com/'
+        url: 'http://www.groundworkcoffee.com/',
+        latitude: 34.0136367,
+        longitude: -118.4937981
     },
     {
         name: 'Groundworks', 
@@ -567,7 +631,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 69,
         yelp_id: 'groundwork-coffee-co-santa-monica-2',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-co-santa-monica-2',
-        url: 'http://www.groundworkcoffee.com/'
+        url: 'http://www.groundworkcoffee.com/',
+        latitude: 33.9992577,
+        longitude: -118.4811278
     },
     {
         name: 'Groundworks', 
@@ -584,7 +650,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 38,
         yelp_id: 'groundwork-coffee-company-venice-2',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-company-venice-2',
-        url: 'http://www.groundworkcoffee.com/'
+        url: 'http://www.groundworkcoffee.com/',
+        latitude: 33.9885275,
+        longitude: -118.4749576
     },
     {
         name: 'Groundworks', 
@@ -601,7 +669,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 198,
         yelp_id: 'groundwork-coffee-company-venice-3',
         yelp_url: 'http://www.yelp.com/biz/groundwork-coffee-company-venice-3',
-        url: 'http://www.groundworkcoffee.com/'
+        url: 'http://www.groundworkcoffee.com/',
+        latitude: 34.000374,
+        longitude: -118.470273
     },
     {
         name: 'Handsome Coffee Roasters', 
@@ -618,7 +688,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 398,
         yelp_id: 'handsome-coffee-roasters-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/handsome-coffee-roasters-los-angeles',
-        url: 'http://www.handsomecoffee.com/'
+        url: 'http://www.handsomecoffee.com/',
+        latitude: 34.038941,
+        longitude: -118.232467
     },
     {
         name: 'Intelligentsia', 
@@ -635,7 +707,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 1191,
         yelp_id: 'intelligentsia-coffee-los-angeles-4',
         yelp_url: 'http://www.yelp.com/biz/intelligentsia-coffee-los-angeles-4',
-        url: 'http://www.intelligentsiacoffee.com/location/silver-lake-coffeebar'
+        url: 'http://www.intelligentsiacoffee.com/location/silver-lake-coffeebar',
+        latitude: 34.0920063,
+        longitude: -118.2802493
     },
     {
         name: 'Intelligentsia', 
@@ -652,7 +726,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 846,
         yelp_id: 'intelligentsia-coffee-pasadena',
         yelp_url: 'http://www.yelp.com/biz/intelligentsia-coffee-pasadena',
-        url: 'http://www.intelligentsiacoffee.com/location/pasadena-cafe'
+        url: 'http://www.intelligentsiacoffee.com/location/pasadena-cafe',
+        latitude: 34.1459937,
+        longitude: -118.1492766
     },
     {
         name: 'Intelligentsia', 
@@ -669,7 +745,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 842,
         yelp_id: 'intelligentsia-coffee-venice-venice',
         yelp_url: 'http://www.yelp.com/biz/intelligentsia-coffee-venice-venice',
-        url: 'http://www.intelligentsiacoffee.com/location/venice-coffeebar'
+        url: 'http://www.intelligentsiacoffee.com/location/venice-coffeebar',
+        latitude: 33.9910995,
+        longitude: -118.4669014
     },
     {
         name: 'Jones Coffee Roasters', 
@@ -686,7 +764,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 449,
         yelp_id: 'jones-coffee-roasters-pasadena',
         yelp_url: 'http://www.yelp.com/biz/jones-coffee-roasters-pasadena', 
-        url: 'http://www.thebestcoffee.com/'
+        url: 'http://www.thebestcoffee.com/',
+        latitude: 34.1337886,
+        longitude: -118.1492671
     },
     {
         name: 'Lamill', 
@@ -703,7 +783,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 996,
         yelp_id: 'lamill-coffee-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/lamill-coffee-los-angeles',
-        url: 'https://lamillcoffee.com/'
+        url: 'https://lamillcoffee.com/',
+        latitude: 34.0888606,
+        longitude: -118.2686893
     },
     {
         name: 'Paper or Plastik', 
@@ -720,7 +802,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 381,
         yelp_id: 'paper-or-plastik-cafe-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/paper-or-plastik-cafe-los-angeles',
-        url: 'http://www.paperorplastikcafe.com/'
+        url: 'http://www.paperorplastikcafe.com/',
+        latitude: 34.0508251,
+        longitude: -118.3644004
     },
     {
         name: 'Primo Passo Coffee', 
@@ -737,7 +821,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 110,
         yelp_id: 'primo-passo-coffee-co-santa-monica-4',
         yelp_url: 'http://www.yelp.com/biz/primo-passo-coffee-co-santa-monica-4',
-        url: 'http://primopassocoffee.com/'
+        url: 'http://primopassocoffee.com/',
+        latitude: 34.0267907,
+        longitude: -118.5015204
     },
     {
         name: 'Red Bread', 
@@ -754,7 +840,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 32,
         yelp_id: 'red-bread-culver-city',
         yelp_url: 'http://www.yelp.com/biz/red-bread-culver-city',
-        url: 'http://www.thebreadisred.com/'
+        url: 'http://www.thebreadisred.com/',
+        latitude: 33.9928231,
+        longitude: -118.4426953
     },
     {
         name: 'Single Origin', 
@@ -771,7 +859,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 47,
         yelp_id: 'single-origin-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/single-origin-los-angeles',
-        url: 'http://www.socoffeela.com/'
+        url: 'http://www.socoffeela.com/',
+        latitude: 34.0664817,
+        longitude: -118.3520389
     },
     {
         name: 'Spring for Coffee', 
@@ -788,7 +878,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 261,
         yelp_id: 'spring-for-coffee-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/spring-for-coffee-los-angeles',
-        url: 'http://www.springforcoffee.com/'
+        url: 'http://www.springforcoffee.com/',
+        latitude: 34.045952,
+        longitude: -118.250472
     },
     {
         name: 'The Refinery', 
@@ -823,7 +915,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 193,
         yelp_id: 'tiago-espresso-bar-kitchen-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/tiago-espresso-bar-kitchen-los-angeles',
-        url: 'http://tiagocoffee.com/'
+        url: 'http://tiagocoffee.com/',
+        latitude: 34.1011481,
+        longitude: -118.344414
     },
     {
         name: 'Two Guns Espresso', 
@@ -840,7 +934,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 237,
         yelp_id: 'two-guns-espresso-manhattan-beach-2',
         yelp_url: 'http://www.yelp.com/biz/two-guns-espresso-manhattan-beach-2',
-        url: 'http://www.twogunsespresso.com/'
+        url: 'http://www.twogunsespresso.com/',
+        latitude: 33.8813611,
+        longitude: -118.3955415
     },
     {
         name: 'Urth Caffe', 
@@ -857,7 +953,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 990,
         yelp_id: 'urth-caffe-beverly-hills-3',
         yelp_url: 'http://www.yelp.com/biz/urth-caffe-beverly-hills-3',
-        url: 'http://www.urthcaffe.com/'
+        url: 'http://www.urthcaffe.com/',
+        latitude: 34.0626419,
+        longitude: -118.399434
     },
     {
         name: 'Urth Caffe', 
@@ -874,7 +972,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 2338,
         yelp_id: 'urth-caffe-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/urth-caffe-los-angeles',
-        url: 'http://www.urthcaffe.com/'
+        url: 'http://www.urthcaffe.com/',
+        latitude: 34.041974,
+        longitude: -118.235426
     },
     {
         name: 'Urth Caffe', 
@@ -891,7 +991,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 439,
         yelp_id: 'urth-caffe-los-angeles',
         yelp_url: 'http://www.yelp.com/biz/urth-caff%C3%A9-pasadena-2',
-        url: 'http://www.urthcaffe.com/'
+        url: 'http://www.urthcaffe.com/',
+        latitude: 34.1458586,
+        longitude: -118.1381973
     },
     {
         name: 'Urth Caffe', 
@@ -908,7 +1010,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 1590,
         yelp_id: 'urth-caffe-santa-monica',
         yelp_url: 'http://www.yelp.com/biz/urth-caffe-santa-monica',
-        url: 'http://www.urthcaffe.com/'
+        url: 'http://www.urthcaffe.com/',
+        latitude: 34.0043593,
+        longitude: -118.4857728,
     },
     {
         name: 'Urth Caffe', 
@@ -925,7 +1029,9 @@ coffeeshops = Coffeeshop.create([
         yelp_review: 1348,
         yelp_id: 'urth-caffe-west-hollywood',
         yelp_url: 'http://www.yelp.com/biz/urth-caffe-west-hollywood',
-        url: 'http://www.urthcaffe.com/'
+        url: 'http://www.urthcaffe.com/',
+        latitude: 34.0821163,
+        longitude: -118.378866,
     }
 ])
 

@@ -54,5 +54,5 @@ production:
   encoding: unicode
   database: coffeeapp_production
   pool: 5
-  username: coffeeapp
+  username: 
   password:

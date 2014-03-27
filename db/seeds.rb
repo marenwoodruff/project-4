@@ -893,7 +893,6 @@ coffeeshops = Coffeeshop.create([
         fair_trade: nil,
         organic: nil, 
         direct_trade: true, 
-        organic: true, 
         yelp_rating: 4.0, 
         yelp_review: 129,
         yelp_id: 'the-refinery-santa-monica',

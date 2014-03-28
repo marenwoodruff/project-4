@@ -151,13 +151,29 @@
   }
   #directions-panel {
     margin-top: 15px;
-    margin-right: 40px;
+    margin-right: 52px;
     width: 300px;
   }
 }
 
 
-
+@media (max-width: 350px){
+  #map-canvas1 {
+    height: 270px;
+    width: 270px;
+    margin: 0 auto;
+  }
+  #directions {
+    height: 280px;
+    width: 280px;
+    margin: 0 auto;
+  }
+  #directions-panel {
+    /*margin-top: 15px;*/
+    /*margin-right: 5px;*/
+    width: 260px;
+  }
+}
 
 
  /* welcome page styles */

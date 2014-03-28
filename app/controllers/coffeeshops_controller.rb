@@ -13,8 +13,6 @@ class CoffeeshopsController < ApplicationController
         format.html { @coffeeshops = Coffeeshop.near([params[:search_lat], params[:search_lng]], params[:distance] || 5).reverse}
         format.json { @coffeeshops = Coffeeshop.near([params[:search_lat], params[:search_lng]], params[:distance] || 5) } 
       end
-    # else
-    #   @coffeeshops = Coffeeshop.all
     end
   end
 

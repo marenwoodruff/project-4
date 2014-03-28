@@ -11,20 +11,13 @@
 /* Index and Show page */
 
 #map-canvas1 {
-    height: 500px;
-    width: 500px;
-    margin: 0 auto;
-    float: left;
-    margin-left: 100px;
-    margin-top: 15px;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  float: left;
+  margin-left: 100px;
+  margin-top: 15px;
 }
-
-#directions-panel {
-        height: 100%;
-        float: right;
-        width: 390px;
-        overflow: auto;
-      }
 
 #map-canvas1 img { 
   max-width: none;
@@ -36,12 +29,12 @@
 }
 
 #directions {
-    height: 500px;
-    width: 500px;
-    margin: 0 auto;
-    float: left;
-    margin-left: 100px;
-    margin-top: 15px;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  float: left;
+  margin-left: 50px;
+  margin-top: 15px;
 }
 
 #directions img { 
@@ -52,6 +45,20 @@
   width: auto; 
   display: inline; 
 } 
+
+#directions-panel {
+  height: 500px;
+  float: right;
+  margin-right: 50px;
+  width: 390px;
+  overflow: auto;
+  margin-top: 5px;
+}
+
+#nearby-locations {
+  float: center;
+  margin: 0 auto;
+}
 
 #map-div {
     margin: 0 auto;
@@ -68,7 +75,15 @@
     margin-left: 75px;
   }
   #directions {
-    margin-left: 75px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+  }
+  #nearby-locations {
+    margin-top: 15px;
+  }
+  #title {
+    height: 40px;
+    clear: both;
   }
 }
 
@@ -80,7 +95,11 @@
     float: center;
     margin-top: 15px;
   }
-
+  #directions-panel {
+    margin-top: 15px;
+    margin-right: 190px;
+    height: 360px;
+  }
   #directions {
     height: 400px;
     width: 400px;
@@ -88,9 +107,9 @@
     float: center;
     margin-top: 15px;
   }
-
-  #nearby-locations {
-    margin-top: 15px;
+  #title {
+    margin-left: 1px;
+    clear: both;
   }
   .form {
     margin-left: 200px;
@@ -101,18 +120,39 @@
   .form {
     margin-left: 0px;
   }
+  #directions-panel {
+    margin-top: 15px;
+    margin-right: 126px;
+  }
+  #title {
+    margin-left: 1px;
+    clear: both;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width: 481px){
+  #directions-panel {
+    margin-top: 15px;
+    margin-right: 47px;
+  }
 }
 
 @media (max-width: 400px){
   #map-canvas1 {
-    height: 300px;
-    width: 300px;
+    height: 310px;
+    width: 310px;
     margin: 0 auto;
   }
   #directions {
-    height: 300px;
-    width: 300px;
+    height: 320px;
+    width: 320px;
     margin: 0 auto;
+  }
+  #directions-panel {
+    margin-top: 15px;
+    margin-right: 20px;
+    width: 360px;
   }
 }
 

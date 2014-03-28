@@ -74,19 +74,22 @@
 
 
 <div>
-    <!-- <button onclick="calcRoute()">Get directions</button> -->
+  <div>
     <!-- The "canvas," where our map is rendered -->
     <div class="map-canvas" id="directions"></div>
     <div id="directions-panel"></div>
+  </div>
+</div>
+  <div>
     <div id="nearby-locations">
-      <h4>Nearby locations</h4>
+      <h4 id="title">Nearby locations</h4>
       <ul class="near">
         <% for coffeeshop in @coffeeshop.nearbys(5) %>
           <li><%= link_to coffeeshop.name, coffeeshop %>, (<%= coffeeshop.distance.round(2) %> miles)</li>
         <% end %>
       </ul>
     </div>
-</div>
+  </div>
 
 <!-- Our gmaps4rails handler scripts -->
 <script type="text/javascript">

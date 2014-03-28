@@ -74,9 +74,10 @@
 
 
 <div>
+    <!-- <button onclick="calcRoute()">Get directions</button> -->
     <!-- The "canvas," where our map is rendered -->
-    <div class="map-canvas" id="map-canvas"></div>
-
+    <div class="map-canvas" id="directions"></div>
+    <div id="directions-panel"></div>
     <div id="nearby-locations">
       <h4>Nearby locations</h4>
       <ul class="near">
@@ -89,21 +90,43 @@
 
 <!-- Our gmaps4rails handler scripts -->
 <script type="text/javascript">
-  handler = Gmaps.build('Google');
-  // provider is where we pass in mapOptions like zoom, and our API key (not required)
-  // internal is where we tell the map where to render and set options like markers, bounds, etc.
-  handler.buildMap({ provider: {zoom: 16, provider_key: "AIzaSyCYWhL3gSXTWROdo8CQMOiFyd6YNGzB918"}, internal: {id: 'map-canvas'}}, function(){
-    markers = handler.addMarkers([
-      {
-        lat: <%=@coffeeshop.latitude%>, // pulls in the latitude for the marker via ERB
-        lng: <%=@coffeeshop.longitude%>, // pulls in the longitude for the marker via ERB
-        infowindow:  "<%=@coffeeshop.name%>"// info window text (this is optional)
+
+  var directionsDisplay = new google.maps.DirectionsRenderer();
+  var directionsService = new google.maps.DirectionsService();
+
+  var directionsDisplay;
+  var directionsService = new google.maps.DirectionsService();
+
+  function initialize() {
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var mapOptions = {
+      zoom: 7,
+      center: new google.maps.LatLng(34.0131241, -118.49501880000001)
+    };
+    var map = new google.maps.Map(document.getElementById('directions'),
+        mapOptions);
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+  }
+
+  function calcRoute() {
+    var origin= new google.maps.LatLng(34.0131241, -118.49501880000001);
+    var destination = new google.maps.LatLng(<%= @coffeeshop.latitude%>, <%=@coffeeshop.longitude%>);
+    var request = {
+        origin:      origin,
+        destination: destination,
+        travelMode:  google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, function(response, status) {
+      if (status == google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(response);
       }
-    ]);
-    handler.map.centerOn(markers[0]); // centers on the first marker in the array
-  });
+    });
+  }
 
+  calcRoute();
 
-
+  google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 

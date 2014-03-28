@@ -16,7 +16,7 @@ h4 {
     font-size: 40px;
 }
 
-#coffeeshop {
+.coffeeshop {
     font-family: 'Abril Fatface', cursive;
     font-size: 20px;
 }
@@ -54,6 +54,9 @@ h4 {
 @media (max-width: 400px){
     h1 {
         font-size: 40px;
+    }
+    .coffeeshop {
+        font-size: 15px;
     }
 }
 

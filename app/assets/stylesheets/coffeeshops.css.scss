@@ -170,13 +170,17 @@
   }
   #directions-panel {
     /*margin-top: 15px;*/
-    /*margin-right: 5px;*/
-    width: 260px;
+    margin-left: 15px;
+    width: 270px;
   }
 }
 
 
  /* welcome page styles */
+
+ .button.radius.round {
+    background-color: #AAFFFF;
+ }
 
  .opener { background-color: #3399ff }
 
